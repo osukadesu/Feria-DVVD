@@ -1,0 +1,121 @@
+:root {
+    --rojo-dav: #ED1C24;
+    --gris-fondo: #f8f9fa;
+    --texto: #333;
+    --sombra-futurista: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(237, 28, 36, 0.05);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gris-fondo);
+    margin: 0;
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+/* Header */
+.navbar {
+    background: white;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: var(--rojo-dav);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+/* Contenedor y Cards */
+.container {
+    padding: 50px 10%;
+}
+
+.product-card {
+    background: white;
+    border-radius: 30px; /* Bordes muy redondeados */
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    box-shadow: var(--sombra-futurista);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.product-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenido de texto */
+.content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.content h2 {
+    color: var(--rojo-dav);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Imágenes */
+.image-box {
+    flex: 1;
+    text-align: center;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.product-card:hover img {
+    filter: grayscale(0%);
+}
+
+/* Botones */
+.btn {
+    background-color: var(--rojo-dav);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b3141a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-card, .product-card.reverse {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .content {
+        padding: 20px 0;
+        text-align: center;
+    }
+}
