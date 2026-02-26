@@ -1,67 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Davivienda - Feria Bogotá</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feria de productos Davivienda - SENA Salitre</title>
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEVHcEzhERzhERzhEBzgAAHhAxLsf4Lyq63jKzP2ycv////98fH63t/0urvmR03oX2TukpSDWsEnAAAAA3RSTlMAgfRiPlvRAAAA+klEQVR4AYWTBQLEIBADeyWhbND/f/a8bqkCs4Z03aN3p+of73F3qUfXXwN95260AQBcAAT94B2IkVsDCKZoURaSlLgFwCwrAIpJtcpzDaDJAj6dRGiAwgoAkyo451IELABUGbiqJqtiAuDlt9XBq+EPsKjAbYWiwh+AloAtASA1/EMERbOwGg9mUYF/gPDt528Ug5oHF2UWYR1hLGIE4rABhrgEMGwcjCYjQBVugarZA+voYJ0FJ2Cb4uh1ziFmcOMgx2UOReawlMsKXJRJZ4opKeUhv98pytx2w7B6X9uQh/b5IbjbkwSJjziOjsC1boHbo3d7eG+P/wsqEBEE20esQgAAAABJRU5ErkJggg=="
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">DAVIVIENDA</div>
-            <p>Feria de Servicios Bogotá DC</p>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#" class="navbar-brand"
+            ><img
+              src="https://www.davivienda.com/documents/816879/823298/Red.svg/c3f771db-ec10-ce9b-0589-6b48031352b1?version=1.0&t=1740069130426"
+              alt="Logo Davivienda"
+          /></a>
+        </div>
+        <p>Feria de productos Davivienda - SENA Salitre</p>
+      </nav>
     </header>
 
     <main class="container">
-        <section class="product-card">
-            <div class="content">
-                <h2>Tarjetas de Crédito</h2>
-                <p>El mundo en sus manos con beneficios exclusivos, preventas para eventos en Bogotá y asistencias internacionales. Flexibilidad total para sus compras.</p>
-                <button class="btn">Conocer más</button>
-            </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=500&q=80" alt="Tarjetas de Crédito">
-            </div>
-        </section>
+      <section class="product-card">
+        <div class="content">
+          <h2>Tarjetas de Crédito</h2>
+          <p>
+            Descubra nuestra amplia gama de tarjetas diseñadas para cada estilo
+            de vida.
+          </p>
 
-        <section class="product-card reverse">
-            <div class="content">
-                <h2>Libranza y Pensionados</h2>
-                <p>La solución financiera que se adapta a su nómina o pensión. Tasas preferenciales y procesos ágiles para cumplir sus sueños sin trámites complicados.</p>
-                <button class="btn">Solicitar aquí</button>
-            </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1573164060897-425941c30211?auto=format&fit=crop&w=500&q=80" alt="Pensionados">
-            </div>
-        </section>
+          <button class="accordion-btn" id="toggleAccordion">
+            Ver Catálogo Completo
+          </button>
 
-        <section class="product-card">
-            <div class="content">
-                <h2>Seguro Bolso y Cartera</h2>
-                <p>Tranquilidad total en sus recorridos por la ciudad. Protegemos sus pertenencias personales y el contenido de su bolso ante cualquier imprevisto.</p>
-                <button class="btn">Ver coberturas</button>
-            </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Seguro Bolso">
-            </div>
-        </section>
+          <div class="accordion-content" id="accordionPanel">
+            <h3 class="catalog-title">Catálogo: Tarjetas de Crédito</h3>
+            <div class="cards-grid" id="cardsContainer"></div>
+          </div>
+        </div>
+      </section>
 
-        <section class="product-card reverse">
-            <div class="content">
-                <h2>Tarjetas Amparadas</h2>
-                <p>Comparta los beneficios de su tarjeta con sus seres queridos, manteniendo el control total de sus gastos y brindándoles respaldo financiero.</p>
-                <button class="btn">Asignar cupo</button>
-            </div>
-            <div class="image-box">
-                <img src="https://images.unsplash.com/photo-1591033594798-33227a05780d?auto=format&fit=crop&w=500&q=80" alt="Amparadas">
-            </div>
-        </section>
+      <section class="product-card reverse">
+        <div class="content">
+          <h2>Créditos de Libranza</h2>
+          <p>
+            La solución financiera que se adapta a su nómina o pensión. Acceda a
+            un crédito con tasa y cuota fija mensual, descontado mes a mes de su
+            nómina o pensión si su empresa tiene convenio de libranza con
+            nosotros..
+          </p>
+          <a
+            href="https://www.davivienda.com/personas/credito-de-consumo/credito-de-libranza"
+            class="btn"
+            target="_blank"
+            >Solicitar aquí!</a
+          >
+        </div>
+        <div class="image-box">
+          <img
+            src="https://www.davivienda.com/documents/816879/836002/BannerPrincipal-Desktop-+Libreinversio%CC%81n%400.75x.webp/96519496-0bb0-5472-d300-a1718dbb0976?t=1746467228940"
+            alt="Pensionados o Empleados"
+          />
+        </div>
+      </section>
+
+      <section class="product-card">
+        <div class="content">
+          <h2>Seguro Bolso y Cartera</h2>
+          <p>
+            Asegure el contenido de su cartera, bolso o cosmetiquera ante hurto
+            con y sin violencia.
+          </p>
+          <a
+            href="https://www.davivienda.com/personas/seguros-de-bienes-y-finanzas/seguro-para-carteras"
+            class="btn"
+            target="_blank"
+            >Adquirir seguro!</a
+          >
+        </div>
+        <div class="image-box">
+          <img
+            src="https://www.davivienda.com/documents/816879/835571/BannerPrincipal-Desktop-bolsos%400.75x.webp/ffac03db-b0f7-075f-35a7-bf1f0ae4ef76?t=1745847608221"
+            alt="Seguro de robo de bolso y cartera"
+          />
+        </div>
+      </section>
+
+      <section class="product-card reverse">
+        <div class="content">
+          <h2>Tarjetas Amparadas</h2>
+          <p>
+            La Tarjeta de Crédito Davivienda amparada es un beneficio que se
+            entrega al tarjetahabiente principal (amparador), permitiéndole
+            asignar parte de su cupo en una nueva Tarjeta de Crédito a la(s)
+            persona(s) que cliente designe (amparado). El tarjetahabiente
+            amparado adquiere todos los beneficios y responsabilidades de una
+            tarjeta principal.
+          </p>
+          <a
+            href="https://bienvenido.davivienda.cr/wps/portal/personas/nuevo/personas/aqui_puedo/respaldar_a_mi_familia/tarjetas_amparadas/!ut/p/z1/pZFBb4JAEIV_iweuOwNs18XbthFaGrGNodC5NEgokrisAZS_X2y8mNSNSec2me_lvcwDghyoLU5NXQyNaYv9tH-S-PLlO0_iR2-1CQMf1Qo3TypYu9GLgMwGrCMPaDonzwF3X6WXyDh-QMGXH-EyTBF9ftHjjVF4n94C0D_ynwGyx8uAbBa_H7ABGM4vgMUkBmq2mo2lZsgC4XIhOUeJQgg-P3ek2q0va6Cu-q66qmPHbqpuNwyHfuGgg-M4stqYel-x0mgH_5LsTD9Afk3CQadpmmPzpjPZq9nsB2QMfsQ!/dz/d5/L2dBISEvZ0FBIS9nQSEh/"
+            class="btn"
+            target="_blank"
+            >Asignar cupo!</a
+          >
+        </div>
+        <div class="image-box">
+          <img
+            src="https://bienvenido.davivienda.cr/wps/wcm/connect/personas/e84f183d-017f-4af5-ab1e-69ac7525f347/BANNER-CORTO-272X170.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_NH941K82NG9J20QGP2BPTN39I7-e84f183d-017f-4af5-ab1e-69ac7525f347-paWPxBX"
+            alt="Amparadas"
+          />
+        </div>
+      </section>
     </main>
 
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-card">
+        <h2 id="modalTitle">Nombre de la Tarjeta</h2>
+        <img id="modalImg" src="" alt="Tarjeta" />
+        <div class="modal-info">
+          <p id="modalDescription">Cargando tarjetas...</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-close" id="closeModal">Cerrar</button>
+          <a href="#" target="_blank" class="btn-more-info" id="modalLink"
+            >Más Info Oficial</a
+          >
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
